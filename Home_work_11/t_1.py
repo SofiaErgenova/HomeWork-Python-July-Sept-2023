@@ -35,7 +35,8 @@ class Matrix:
                 for j in range(self.column):
                     row.append(self.ready_matrix[i][j] + other.ready_matrix[i][j])
                 result.append(row)
-            return result
+                self.add_matrix = result
+            return self
         else:
             print("Матрицы разных размеров!")
             return None
@@ -52,7 +53,8 @@ class Matrix:
                         elem += self.ready_matrix[i][k] * other.ready_matrix[k][j]
                     row.append(elem)
                 result.append(row)
-            return result
+                self.mul_matrix = result
+            return self
         else:
             print("Умножение матриц невозможно!")
             return None

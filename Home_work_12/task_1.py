@@ -57,17 +57,14 @@ class Student:
             scores = [float(row[3]) for row in reader if row[1] == subj]
             if len(scores) > 0:
                 return sum(scores) / float(len(scores))
-            else:
-                return None
-
+            
     def get_average_grade(self, subj):
         with open('study.csv', 'r', newline='') as file:
             reader = csv.reader(file)
             grades = [float(row[2]) for row in reader if row[1] == subj]
         if len(grades) > 0:
             return sum(grades) / float(len(grades))
-        else:
-            return None
+    
 
 
 if __name__ == '__main__':
